@@ -2386,6 +2386,14 @@ section {
         font-size: 2rem;
     }
 
+    .learn-grid {
+        gap: 0;
+    }
+
+    .learn-image-area {
+        display: none;
+    }
+
     .recipes-photo-collage {
         grid-template-columns: 1fr;
     }
