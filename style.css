@@ -1340,9 +1340,10 @@ section {
 
 .earnings-math {
     display: grid;
-    grid-template-columns: minmax(128px, 1fr) 28px minmax(128px, 1fr) 28px minmax(220px, 1.18fr);
-    gap: 16px;
-    align-items: center;
+    grid-template-columns: 130px 34px 130px 34px minmax(220px, 250px);
+    gap: 18px;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .earnings-math-item,
@@ -1365,8 +1366,8 @@ section {
 .earnings-math-item strong,
 .earnings-result strong {
     font-family: var(--font-serif);
-    font-size: 1.78rem;
-    line-height: 0.98;
+    font-size: 1.62rem;
+    line-height: 0.94;
 }
 
 .earnings-math-item span,
@@ -1380,9 +1381,10 @@ section {
 
 .earnings-operator {
     font-family: var(--font-serif);
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     font-weight: 700;
     color: var(--color-gold-dark);
+    align-self: center;
     justify-self: center;
 }
 
@@ -1393,7 +1395,7 @@ section {
 }
 
 .earnings-result strong {
-    font-size: clamp(1.8rem, 2.7vw, 2.55rem);
+    font-size: clamp(1.95rem, 2.4vw, 2.35rem);
     line-height: 0.92;
 }
 
