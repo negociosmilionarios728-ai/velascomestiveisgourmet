@@ -1,47 +1,8 @@
-<!DOCTYPE html>
+<!--  --><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" as="image" href="assets/ebook_mockup.jpg" fetchpriority="high">
-    <script>
-      window.pixelId = "6a1500284e80d3db9375a0cb";
-
-      function loadUtmifyTracking() {
-        if (window.__utmifyLoaded) return;
-        window.__utmifyLoaded = true;
-
-        var utmScript = document.createElement("script");
-        utmScript.setAttribute("async", "");
-        utmScript.setAttribute("defer", "");
-        utmScript.setAttribute("src", "https://cdn.utmify.com.br/scripts/utms/latest.js");
-        utmScript.setAttribute("data-utmify-prevent-xcod-sck", "");
-        utmScript.setAttribute("data-utmify-prevent-subids", "");
-        document.head.appendChild(utmScript);
-
-        var pixelScript = document.createElement("script");
-        pixelScript.setAttribute("async", "");
-        pixelScript.setAttribute("defer", "");
-        pixelScript.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-        document.head.appendChild(pixelScript);
-      }
-
-      function scheduleTrackingLoad() {
-        if ("requestIdleCallback" in window) {
-          requestIdleCallback(loadUtmifyTracking, { timeout: 8000 });
-        } else {
-          setTimeout(loadUtmifyTracking, 8000);
-        }
-      }
-
-      ["pointerdown", "scroll", "keydown", "touchstart"].forEach(function (eventName) {
-        window.addEventListener(eventName, scheduleTrackingLoad, { once: true, passive: true });
-      });
-
-      window.addEventListener("load", function () {
-        setTimeout(scheduleTrackingLoad, 12000);
-      }, { once: true });
-    </script>
     <meta name="description" content="Aprenda a criar Velas Comestíveis Artesanais e Gourmet em casa. Um guia completo, passo a passo, ideal para iniciantes gerarem renda extra com confeitaria fina e inovadora.">
     <meta name="keywords" content="velas comestiveis, confeitaria gourmet, renda extra, velas artesanais, doces finos, doces gourmet, ebook confeitaria">
     <meta name="author" content="Velas Comestíveis Gourmet">
@@ -50,7 +11,12 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Velas Comestíveis Artesanais - O Guia Completo Gourmet">
     <meta property="og:description" content="Descubra o passo a passo simples para criar velas gourmet incríveis em casa, encantar clientes e faturar alto com essa super tendência.">
-    <meta property="og:image" content="assets/ebook_mockup.jpg">
+    <meta property="og:image" content="assets/ebook_mockup.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <title>Velas Comestíveis Artesanais - Transforme Criatividade em Renda Gourmet</title>
     <link rel="stylesheet" href="style.css">
@@ -77,7 +43,7 @@
                         <span>A Nova Tendência Viral da Confeitaria Gourmet</span>
                     </div>
                     <h1 class="hero-title">
-                        Aprenda a Fazer <span class="highlight-serif">Velas Comestíveis</span> Irresistíveis Que Encantam Qualquer Pessoa
+                        Isso Parece <span class="highlight-serif">Uma Sobremesa</span> Mas São Velas Comestíveis Que Estão Viralizando
                     </h1>
                     <p class="hero-subtitle">
                         Descubra o passo a passo simples para criar velas gourmet incríveis em casa — mesmo começando do zero absoluto e sem experiência na cozinha.
@@ -85,7 +51,7 @@
                     
                     <!-- Call To Action -->
                     <div class="hero-cta-wrapper">
-                        <a href="#oferta" class="btn btn-giant btn-gold-gradient" id="hero-cta-btn">
+                        <a href="#oferta" class="btn btn-giant btn-pulse btn-gold-gradient" id="hero-cta-btn">
                             <span class="btn-text">QUERO APRENDER AGORA</span>
                             <span class="btn-subtext">Acesso imediato • Oferta especial de lançamento</span>
                         </a>
@@ -123,7 +89,7 @@
                 <div class="hero-image-wrapper">
                     <div class="mockup-container">
                         <div class="glowing-orb"></div>
-                        <img src="assets/ebook_mockup.jpg" alt="Mockup 3D Premium do Ebook Velas Comestíveis Artesanais" class="mockup-img" id="mockup-img" width="560" height="560" fetchpriority="high" decoding="async">
+                        <img src="assets/ebook_mockup.png" alt="Mockup 3D Premium do Ebook Velas Comestíveis Artesanais" class="mockup-img" id="mockup-img">
                         <div class="mockup-floating-card">
                             <span class="floating-tag">Campeão de Vendas</span>
                             <div class="stars">★★★★★</div>
@@ -146,7 +112,7 @@
                 <div class="desire-grid">
                     <div class="desire-image-area">
                         <div class="desire-main-img-wrapper">
-                            <img src="assets/vela_gourmet.jpg" alt="Vela Comestível Artesanal de Chocolate Gourmet acesa com calda" class="desire-img" width="720" height="720" loading="lazy" decoding="async">
+                            <img src="assets/vela_gourmet.png" alt="Vela Comestível Artesanal de Chocolate Gourmet acesa com calda" class="desire-img">
                             <div class="desire-badge-overlay">
                                 <span>100% Comestível</span>
                             </div>
@@ -274,49 +240,49 @@
                         <div class="learn-item">
                             <div class="learn-number">01</div>
                             <div class="learn-desc">
-                                <h3>A Receita Base Perfeita</h3>
+                                <h4>A Receita Base Perfeita</h4>
                                 <p>Aprenda a textura correta do chocolate gourmet para que a vela fique firme, mas derreta de forma incrivelmente cremosa na hora da queima.</p>
                             </div>
                         </div>
                         <div class="learn-item">
                             <div class="learn-number">02</div>
                             <div class="learn-desc">
-                                <h3>Como Criar Pavios Comestíveis</h3>
+                                <h4>Como Criar Pavios Comestíveis</h4>
                                 <p>O grande segredo revelado: como fabricar pavios seguros de acender, 100% comestíveis e que não alteram o sabor maravilhoso do seu doce.</p>
                             </div>
                         </div>
                         <div class="learn-item">
                             <div class="learn-number">03</div>
                             <div class="learn-desc">
-                                <h3>Sabores Gourmet Mais Vendidos</h3>
+                                <h4>Sabores Gourmet Mais Vendidos</h4>
                                 <p>Acesso exclusivo às receitas de chocolate trufado, caramelo salgado premium, ninho com nutella cremosa e pistache luxuoso.</p>
                             </div>
                         </div>
                         <div class="learn-item">
                             <div class="learn-number">04</div>
                             <div class="learn-desc">
-                                <h3>Técnicas de Decoração Sofisticada</h3>
+                                <h4>Técnicas de Decoração Sofisticada</h4>
                                 <p>Como aplicar raspas de chocolate, pó de ouro comestível, frutas frescas, marshmallows tostados e técnicas de bicos de confeitar premium.</p>
                             </div>
                         </div>
                         <div class="learn-item">
                             <div class="learn-number">05</div>
                             <div class="learn-desc">
-                                <h3>Estratégias de Venda e Divulgação</h3>
+                                <h4>Estratégias de Venda e Divulgação</h4>
                                 <p>O segredo para atrair clientes dispostos a pagar muito caro pelas suas criações através de postagens virais do Instagram e TikTok.</p>
                             </div>
                         </div>
                         <div class="learn-item">
                             <div class="learn-number">06</div>
                             <div class="learn-desc">
-                                <h3>Precificação Inteligente e Lucrativa</h3>
+                                <h4>Precificação Inteligente e Lucrativa</h4>
                                 <p>Uma fórmula matemática simples para calcular seus custos exatos e definir preços justos que valorizam seu tempo e colocam dinheiro no bolso.</p>
                             </div>
                         </div>
                         <div class="learn-item">
                             <div class="learn-number">07</div>
                             <div class="learn-desc">
-                                <h3>Embalagens de Luxo Que Valorizam</h3>
+                                <h4>Embalagens de Luxo Que Valorizam</h4>
                                 <p>Sugestões práticas de caixas, taças, fitas e tags que transformam sua vela gourmet em um presente inesquecível e luxuoso.</p>
                             </div>
                         </div>
@@ -324,7 +290,7 @@
 
                     <div class="learn-image-area">
                         <div class="learn-img-wrapper">
-                            <img src="assets/vela_preparo.jpg" alt="Pessoa confeitando vela comestível artesanal gourmet em ambiente profissional" class="learn-img" width="720" height="720" loading="lazy" decoding="async">
+                            <img src="assets/vela_preparo.png" alt="Pessoa confeitando vela comestível artesanal gourmet em ambiente profissional" class="learn-img">
                             <div class="learn-overlay-card">
                                 <h3>Seu Caminho para a Confeitaria Inovadora</h3>
                                 <p>Com técnicas profissionais simplificadas para resultados perfeitos desde a primeira tentativa.</p>
@@ -350,12 +316,12 @@
                     <div class="comparison-slider" id="before-after-slider">
                         <!-- Before Image -->
                         <div class="img-container before-image">
-                            <img src="assets/antes.jpg" alt="Sobremesa simples caseira amadora" width="900" height="900" loading="lazy" decoding="async">
+                            <img src="assets/antes.png" alt="Sobremesa simples caseira amadora">
                             <span class="slider-tag before-tag">Sobremesa Comum (Sem Técnica)</span>
                         </div>
                         <!-- After Image -->
                         <div class="img-container after-image" id="after-img-container">
-                            <img src="assets/depois.jpg" alt="Vela Comestível Profissional Gourmet de Luxo" width="900" height="900" loading="lazy" decoding="async">
+                            <img src="assets/depois.png" alt="Vela Comestível Profissional Gourmet de Luxo">
                             <span class="slider-tag after-tag">Vela Gourmet Comestível (Método)</span>
                         </div>
                         <!-- Slider Handle -->
@@ -393,7 +359,7 @@
                                 <span>MC</span>
                             </div>
                             <div class="user-info">
-                               <p class="user-name">Mariana Costa</p>
+                               <h4 class="user-name">Mariana Costa</h4>
                             </div>
                             <div class="user-social-icon">
                                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
@@ -413,7 +379,7 @@
                                 <span>AB</span>
                             </div>
                             <div class="user-info">
-                               <p class="user-name">Amanda Barreto</p>
+                               <h4 class="user-name">Amanda Barreto</h4>
                             </div>
                             <div class="user-social-icon">
                                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
@@ -433,7 +399,7 @@
                                 <span>CR</span>
                             </div>
                             <div class="user-info">
-                               <p class="user-name">Clara Rocha</p>
+                               <h4 class="user-name">Clara Rocha</h4>
                             </div>
                             <div class="user-social-icon">
                                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
@@ -492,7 +458,7 @@
                                 </div>
                                 <span class="payment-note">Pagamento único. Sem bônus.</span>
                             </div>
-                            <a href="https://zuckpay.com.br/checkout/receitas-de-velas-comestiveis-gourmet" target="_blank" class="btn btn-giant btn-gold-gradient" id="basic-order-cta-btn">
+                            <a href="https://pay.hotmart.com" target="_blank" class="btn btn-giant btn-pulse btn-gold-gradient" id="basic-order-cta-btn">
                                 <span class="btn-text">QUERO APRENDER O BÁSICO</span>
                                 <span class="btn-subtext">Comprar apenas o Ebook por R$ 29,90</span>
                             </a>
@@ -508,7 +474,7 @@
                 <div class="section-header text-center">
                     <span class="section-tag" style="background-color: var(--color-red-light); color: var(--color-red-alert); padding: 4px 12px; border-radius: 12px; font-weight: 700;">✨ EXCLUSIVO DO COMBO PREMIUM</span>
                     <h2 class="section-title" style="margin-top: 12px;">Escolhendo o Combo Completo, Você Recebe <span class="highlight-serif">Estes Bônus de Graça</span></h2>
-                    <p class="section-subtitle">Adicione R$ 167,10 em materiais de apoio e treinamento profissional ao seu pedido 100% grátis escolhendo o Combo Premium (R$ 67,90).</p>
+                    <p class="section-subtitle">Adicione R$ 116,80 em materiais de apoio e treinamento profissional ao seu pedido 100% grátis escolhendo o Combo Premium (R$ 67,90).</p>
                     <div class="title-divider"></div>
                 </div>
 
@@ -521,7 +487,7 @@
                         </div>
                         <h3 class="bonus-title">Lista Secreta de Fornecedores</h3>
                         <p class="bonus-text">Saiba exatamente onde comprar os copos gourmet perfeitos, pavios premium a preço de fábrica e as melhores caldas prontas economizando até 50% nos custos.</p>
-                        <span class="bonus-price">De R$ 39,00 por <strong class="free">GRÁTIS</strong></span>
+                        <span class="bonus-price">De R$ 47,00 por <strong class="free">GRÁTIS</strong></span>
                     </div>
 
                     <!-- Bonus 2 -->
@@ -532,7 +498,7 @@
                         </div>
                         <h3 class="bonus-title">Guia Prático de Divulgação no Instagram</h3>
                         <p class="bonus-text">Aprenda a filmar suas velas acesas e o processo de derretimento para fazer Reels e TikToks virais que atraem centenas de seguidores dispostos a comprar.</p>
-                        <span class="bonus-price">De R$ 49,90 por <strong class="free">GRÁTIS</strong></span>
+                        <span class="bonus-price">De R$ 39,90 por <strong class="free">GRÁTIS</strong></span>
                     </div>
 
                     <!-- Bonus 3 -->
@@ -543,7 +509,7 @@
                         </div>
                         <h3 class="bonus-title">Modelos de Embalagem & Tags Editáveis</h3>
                         <p class="bonus-text">Modelos profissionais de rótulos e tags de presentes prontos para você imprimir em casa ou gráfica, gerando uma experiência de luxo incrível para seu cliente.</p>
-                        <span class="bonus-price">De R$ 78,20 por <strong class="free">GRÁTIS</strong></span>
+                        <span class="bonus-price">De R$ 29,90 por <strong class="free">GRÁTIS</strong></span>
                     </div>
                 </div>
             </div>
@@ -628,7 +594,7 @@
                                     <span class="payment-note">Acesso completo + Todos os Bônus Inclusos.</span>
                                 </div>
 
-                                <a href="https://zuckpay.com.br/checkout/velas-comestiveis-completo" target="_blank" class="btn btn-giant btn-gold-gradient" id="order-cta-btn">
+                                <a href="https://pay.hotmart.com" target="_blank" class="btn btn-giant btn-gold-gradient" id="order-cta-btn">
                                     <span class="btn-text">QUERO MEU EBOOK AGORA</span>
                                     <span class="btn-subtext">Aproveitar desconto limitado de hoje</span>
                                 </a>
@@ -735,7 +701,7 @@
                 <p class="final-cta-subtitle">Não fique de fora da tendência mais lucrativa e encantadora do ano. Aprenda a fazer velas gourmet hoje mesmo.</p>
                 
                 <div class="final-cta-btn-wrapper">
-                    <a href="https://zuckpay.com.br/checkout/velas-comestiveis-completo" class="btn btn-giant btn-gold-gradient" id="final-cta-btn">
+                    <a href="#oferta" class="btn btn-giant btn-pulse btn-gold-gradient" id="final-cta-btn">
                         <span class="btn-text">QUERO COMEÇAR AGORA</span>
                         <span class="btn-subtext">Receber o Ebook + Lista de Fornecedores + 3 Bônus Gratuitos</span>
                     </a>
@@ -759,6 +725,6 @@
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
