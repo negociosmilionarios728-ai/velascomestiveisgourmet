@@ -60,6 +60,10 @@ img {
     display: block;
 }
 
+img[loading="lazy"] {
+    content-visibility: auto;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -111,6 +115,11 @@ p {
 /* Sections General */
 section {
     padding: 96px 0;
+}
+
+main > section:not(.hero-section) {
+    content-visibility: auto;
+    contain-intrinsic-size: 900px;
 }
 
 .section-header {
@@ -228,9 +237,10 @@ section {
 
 /* Pulse Animation */
 .btn-pulse {
-    animation: cta-pulse 2s infinite;
+    animation: cta-pulse 2.8s ease-in-out infinite;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
 .btn-pulse::after {
@@ -252,13 +262,13 @@ section {
 
 @keyframes cta-pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.5);
+        transform: translateY(0) scale(1);
     }
-    70% {
-        box-shadow: 0 0 0 18px rgba(197, 160, 89, 0);
+    50% {
+        transform: translateY(-2px) scale(1.015);
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0);
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -441,6 +451,7 @@ section {
     position: relative;
     z-index: 2;
     animation: float 6s ease-in-out infinite;
+    will-change: transform;
 }
 
 @keyframes float {
@@ -472,7 +483,7 @@ section {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--color-white);
-    background-color: var(--color-gold);
+    background-color: var(--color-gold-dark);
     padding: 4px 8px;
     border-radius: 4px;
     display: inline-block;
@@ -964,6 +975,7 @@ section {
     font-size: 1rem;
     font-weight: 700;
     color: var(--color-chocolate);
+    margin: 0;
 }
 
 .user-handle {
@@ -1550,15 +1562,19 @@ section {
     margin-bottom: 16px;
 }
 
+.footer-logo .logo-sans {
+    color: var(--color-white);
+}
+
 .footer-copy {
     font-size: 0.9rem;
-    opacity: 0.6;
+    opacity: 0.82;
     margin-bottom: 8px;
 }
 
 .footer-disclaimer {
     font-size: 0.75rem;
-    opacity: 0.4;
+    opacity: 0.68;
     max-width: 800px;
     margin: 0 auto 24px;
     line-height: 1.5;
@@ -1574,7 +1590,7 @@ section {
 .footer-links a {
     color: var(--color-white);
     text-decoration: none;
-    opacity: 0.6;
+    opacity: 0.82;
     transition: var(--transition-fast);
 }
 
@@ -1584,7 +1600,7 @@ section {
 }
 
 .bullet-divider {
-    opacity: 0.3;
+    opacity: 0.6;
 }
 
 
