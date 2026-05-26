@@ -1331,7 +1331,7 @@ section {
 
 .earnings-math {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1.15fr);
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(220px, 1.3fr);
     gap: 14px;
     align-items: center;
 }
@@ -1382,7 +1382,15 @@ section {
 }
 
 .earnings-result strong {
-    font-size: 2.45rem;
+    font-size: clamp(2rem, 3.2vw, 2.9rem);
+    line-height: 0.95;
+}
+
+.earnings-result strong span {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.48em;
+    line-height: 1;
 }
 
 .earnings-result small {
