@@ -2345,7 +2345,11 @@ section {
 /* Mobile Screen */
 @media (max-width: 576px) {
     section {
-        padding: 64px 0;
+        padding: 36px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 28px;
     }
     
     .hero-title {
