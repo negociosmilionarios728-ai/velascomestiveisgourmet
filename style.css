@@ -1237,6 +1237,15 @@ section {
     font-weight: 700;
     font-size: 0.95rem;
     background-size: cover;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .avatar-1 { background: linear-gradient(135deg, #F39C12 0%, #D35400 100%); }
