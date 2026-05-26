@@ -943,71 +943,26 @@ section {
     backdrop-filter: blur(6px);
 }
 
-.recipe-cup {
+.recipe-image-frame {
     position: absolute;
     top: 62px;
     left: 50%;
     transform: translateX(-50%);
-    width: 116px;
+    width: 126px;
     height: 126px;
-    border-radius: 28px 28px 34px 34px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.66) 0%, rgba(255,255,255,0.2) 100%);
-    border: 1px solid rgba(255,255,255,0.35);
-    box-shadow: inset 0 1px 12px rgba(255, 255, 255, 0.35);
+    border-radius: 28px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 10px 24px rgba(44, 27, 24, 0.24);
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
-.recipe-cup::before {
-    content: '';
-    position: absolute;
-    top: 18px;
-    left: 13px;
-    right: 13px;
-    height: 58px;
-    border-radius: 18px 18px 24px 24px;
-    background: rgba(255, 255, 255, 0.3);
+.recipe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
-
-.cup-flame {
-    position: absolute;
-    top: -18px;
-    left: 50%;
-    width: 18px;
-    height: 26px;
-    transform: translateX(-50%);
-    border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%;
-    background: radial-gradient(circle at 50% 38%, #fff6cf 0%, #ffcb58 48%, #ff8a00 100%);
-    box-shadow: 0 0 14px rgba(255, 189, 80, 0.7);
-}
-
-.cup-flame::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    width: 2px;
-    height: 12px;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.92);
-}
-
-.cup-topping {
-    position: absolute;
-    left: 50%;
-    bottom: 22px;
-    width: 76px;
-    height: 40px;
-    transform: translateX(-50%);
-    border-radius: 22px 22px 18px 18px;
-    box-shadow: 0 10px 18px rgba(44, 27, 24, 0.18);
-}
-
-.topping-red { background: linear-gradient(180deg, #ff9aa5 0%, #d73a56 100%); }
-.topping-green { background: linear-gradient(180deg, #d9f0a4 0%, #7aa54d 100%); }
-.topping-dark { background: linear-gradient(180deg, #8a7267 0%, #2c1b18 100%); }
-.topping-wine { background: linear-gradient(180deg, #ef7a87 0%, #942b44 100%); }
-.topping-brown { background: linear-gradient(180deg, #d2a682 0%, #6d432f 100%); }
-.topping-caramel { background: linear-gradient(180deg, #f7d28a 0%, #c98632 100%); }
-.topping-banana { background: linear-gradient(180deg, #ffe8aa 0%, #dbb25c 100%); }
 
 .recipe-card h3 {
     font-family: var(--font-serif);
