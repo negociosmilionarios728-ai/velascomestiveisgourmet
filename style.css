@@ -1370,6 +1370,20 @@ section {
     line-height: 0.94;
 }
 
+.earnings-big-number,
+.earnings-big-label {
+    display: block;
+}
+
+.earnings-big-number {
+    font-size: 1.18em;
+    line-height: 0.9;
+}
+
+.earnings-big-label {
+    line-height: 0.92;
+}
+
 .earnings-math-item span,
 .earnings-result small {
     margin-top: 8px;
