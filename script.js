@@ -3,6 +3,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('js-enhanced');
     initCountdownTimer();
     scheduleNonCriticalWork(initFaqAccordion);
     scheduleNonCriticalWork(initScrollReveal);
