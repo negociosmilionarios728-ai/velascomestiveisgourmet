@@ -1331,20 +1331,21 @@ section {
 
 .earnings-math {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(220px, 1.3fr);
-    gap: 14px;
+    grid-template-columns: minmax(128px, 1fr) 28px minmax(128px, 1fr) 28px minmax(220px, 1.18fr);
+    gap: 16px;
     align-items: center;
 }
 
 .earnings-math-item,
 .earnings-result {
-    min-height: 146px;
+    min-height: 172px;
     border-radius: 24px;
-    padding: 24px 20px;
+    padding: 24px 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    min-width: 0;
 }
 
 .earnings-math-item {
@@ -1355,8 +1356,8 @@ section {
 .earnings-math-item strong,
 .earnings-result strong {
     font-family: var(--font-serif);
-    font-size: 2rem;
-    line-height: 1.05;
+    font-size: 1.78rem;
+    line-height: 0.98;
 }
 
 .earnings-math-item span,
@@ -1370,9 +1371,10 @@ section {
 
 .earnings-operator {
     font-family: var(--font-serif);
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 700;
     color: var(--color-gold-dark);
+    justify-self: center;
 }
 
 .earnings-result {
@@ -1382,14 +1384,14 @@ section {
 }
 
 .earnings-result strong {
-    font-size: clamp(2rem, 3.2vw, 2.9rem);
-    line-height: 0.95;
+    font-size: clamp(1.8rem, 2.7vw, 2.55rem);
+    line-height: 0.92;
 }
 
 .earnings-result strong span {
     display: block;
-    margin-top: 4px;
-    font-size: 0.48em;
+    margin-top: 6px;
+    font-size: 0.44em;
     line-height: 1;
 }
 
