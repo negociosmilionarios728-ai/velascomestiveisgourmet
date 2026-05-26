@@ -450,7 +450,6 @@ main > section:not(.hero-section) {
     filter: drop-shadow(0 20px 40px rgba(44, 27, 24, 0.15));
     position: relative;
     z-index: 2;
-    animation: float 6s ease-in-out infinite;
     will-change: transform;
 }
 
@@ -483,7 +482,7 @@ main > section:not(.hero-section) {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--color-white);
-    background-color: var(--color-gold-dark);
+    background-color: var(--color-chocolate);
     padding: 4px 8px;
     border-radius: 4px;
     display: inline-block;

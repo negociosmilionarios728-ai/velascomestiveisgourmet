@@ -3,20 +3,20 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. COUNTDOWN TIMER (PERSISTENT 15 MINUTES)
     initCountdownTimer();
-
-    // 2. FAQ ACCORDION
-    initFaqAccordion();
-
-    // 3. BEFORE & AFTER DRAG SLIDER (INTERACTIVE & RESPONSIVE)
-    initBeforeAfterSlider();
-
-    // 4. SCROLL REVEAL (INTERSECTION OBSERVER)
-    initScrollReveal();
-
+    scheduleNonCriticalWork(initFaqAccordion);
+    scheduleNonCriticalWork(initScrollReveal);
+    scheduleNonCriticalWork(initLazyBeforeAfterSlider);
 });
+
+function scheduleNonCriticalWork(task) {
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(task, { timeout: 2500 });
+        return;
+    }
+
+    setTimeout(task, 1);
+}
 
 /**
  * 1. COUNTDOWN TIMER WITH LOCALSTORAGE PERSISTENCE
@@ -108,12 +108,36 @@ function initFaqAccordion() {
 /**
  * 3. BEFORE & AFTER INTERACTIVE SLIDER (DRAG AND TOUCH SUPPORT)
  */
+function initLazyBeforeAfterSlider() {
+    const slider = document.getElementById('before-after-slider');
+    if (!slider) return;
+
+    if (!('IntersectionObserver' in window)) {
+        initBeforeAfterSlider();
+        return;
+    }
+
+    const sliderObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            initBeforeAfterSlider();
+            observer.disconnect();
+        });
+    }, {
+        rootMargin: '300px 0px',
+        threshold: 0.01
+    });
+
+    sliderObserver.observe(slider);
+}
+
 function initBeforeAfterSlider() {
     const slider = document.getElementById('before-after-slider');
     const afterContainer = document.getElementById('after-img-container');
     const handle = document.getElementById('slider-handle');
 
-    if (!slider || !afterContainer || !handle) return;
+    if (!slider || !afterContainer || !handle || slider.dataset.initialized === 'true') return;
+    slider.dataset.initialized = 'true';
 
     const afterImage = afterContainer.querySelector('img');
     let isDragging = false;
@@ -127,14 +151,9 @@ function initBeforeAfterSlider() {
         }
     }
 
-    // Set initial size
     resizeImages();
     window.addEventListener('resize', resizeImages);
-
-    // Initial slider position at 50%
     setSliderPosition(50);
-
-    // Event listeners for Drag/Touch start
     handle.addEventListener('mousedown', (e) => {
         isDragging = true;
         slider.classList.add('dragging');
