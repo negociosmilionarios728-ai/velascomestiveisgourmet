@@ -896,15 +896,15 @@ section {
 
 .recipe-card {
     position: relative;
-    min-height: 290px;
+    min-height: 330px;
     border-radius: 26px;
-    padding: 22px;
+    padding: 214px 18px 20px;
     color: var(--color-white);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     transition: var(--transition-smooth);
     isolation: isolate;
 }
@@ -968,6 +968,7 @@ section {
     font-family: var(--font-serif);
     font-size: 1.45rem;
     line-height: 1.15;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
@@ -2069,7 +2070,8 @@ section {
     }
 
     .recipe-card {
-        min-height: 260px;
+        min-height: 310px;
+        padding-top: 206px;
     }
 
     .recipes-extra-board {
