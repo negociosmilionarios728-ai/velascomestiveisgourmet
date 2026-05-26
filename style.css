@@ -1496,6 +1496,12 @@ section {
     width: 600px;
     height: 600px;
     background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+}
+
+.final-cta-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .final-cta-badge {
