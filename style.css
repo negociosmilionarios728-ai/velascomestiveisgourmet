@@ -1370,6 +1370,11 @@ section {
     line-height: 0.94;
 }
 
+.earnings-math-item:first-child strong {
+    position: relative;
+    left: -4px;
+}
+
 .earnings-math-item span,
 .earnings-result small {
     margin-top: 8px;
