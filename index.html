@@ -974,5 +974,40 @@
     </footer>
 
     <script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const currentParams = window.location.search;
+
+    const checkoutButtons = [
+        "order-cta-btn",
+        "basic-order-cta-btn"
+    ];
+
+    checkoutButtons.forEach(function(buttonId) {
+
+        const button = document.getElementById(buttonId);
+
+        if (button && currentParams) {
+
+            const originalHref = button.getAttribute("href");
+
+            const separator = originalHref.includes("?") ? "&" : "?";
+
+            const updatedHref =
+                originalHref +
+                separator +
+                currentParams.replace("?", "");
+
+            button.setAttribute("href", updatedHref);
+
+            console.log("UTMs adicionadas:", updatedHref);
+        }
+    });
+
+});
+</script>
+
 </body>
 </html>
