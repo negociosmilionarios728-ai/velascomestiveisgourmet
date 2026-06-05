@@ -20,6 +20,21 @@
 
     <title>Velas Comestíveis Artesanais - Transforme Criatividade em Renda Gourmet</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        window.pixelId = "6a1500284e80d3db9375a0cb";
+    </script>
+    <script
+        src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+        data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids
+        async
+        defer
+    ></script>
+    <script
+        src="https://cdn.utmify.com.br/scripts/pixel/pixel.js"
+        async
+        defer
+    ></script>
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -1026,7 +1041,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    const currentParams = window.location.search;
+    const currentParams = new URLSearchParams(window.location.search);
 
     const checkoutButtons = [
         "order-cta-btn",
@@ -1037,20 +1052,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const button = document.getElementById(buttonId);
 
-        if (button && currentParams) {
+        if (button && currentParams.toString()) {
 
-            const originalHref = button.getAttribute("href");
+            const checkoutUrl = new URL(button.getAttribute("href"), window.location.href);
 
-            const separator = originalHref.includes("?") ? "&" : "?";
+            currentParams.forEach(function(value, key) {
+                if (!checkoutUrl.searchParams.has(key)) {
+                    checkoutUrl.searchParams.set(key, value);
+                }
+            });
 
-            const updatedHref =
-                originalHref +
-                separator +
-                currentParams.replace("?", "");
+            const updatedHref = checkoutUrl.toString();
 
             button.setAttribute("href", updatedHref);
-
-            console.log("UTMs adicionadas:", updatedHref);
         }
     });
 
