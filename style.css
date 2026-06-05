@@ -2180,28 +2180,6 @@ section {
     color: var(--color-gold-dark);
 }
 
-.cta-trust-badges {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 14px;
-}
-
-.cta-trust-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 7px 10px;
-    border: 1px solid rgba(197, 160, 89, 0.35);
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.72);
-    color: var(--color-chocolate);
-    font-size: 0.78rem;
-    font-weight: 800;
-    line-height: 1.2;
-}
-
 .guarantee-image {
     display: block;
     width: 100%;
