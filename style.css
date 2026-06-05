@@ -1344,6 +1344,20 @@ section {
     box-shadow: var(--shadow-lg);
 }
 
+.whatsapp-testimonial-card {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background-color: transparent;
+    align-self: start;
+}
+
+.whatsapp-testimonial-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .testimonial-user {
     display: flex;
     align-items: center;
