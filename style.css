@@ -2202,6 +2202,15 @@ section {
     line-height: 1.2;
 }
 
+.guarantee-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(44, 27, 24, 0.12);
+}
+
 .guarantee-box {
     display: flex;
     gap: 16px;
