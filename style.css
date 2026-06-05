@@ -357,8 +357,22 @@ section {
     font-size: 3.5rem;
     font-weight: 800;
     color: var(--color-chocolate);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     line-height: 1.15;
+}
+
+.hero-proof-strip {
+    display: inline-flex;
+    max-width: 100%;
+    margin-bottom: 22px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    color: var(--color-white);
+    background: linear-gradient(135deg, #3b241f 0%, #8b5a34 56%, #c5a059 100%);
+    box-shadow: var(--shadow-gold);
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 1.25;
 }
 
 .hero-subtitle {
@@ -487,6 +501,112 @@ section {
     color: var(--color-chocolate-light);
 }
 
+
+/* ==========================================================================
+   VIDEO SECTION
+   ========================================================================== */
+.video-section {
+    background: linear-gradient(180deg, var(--color-white) 0%, var(--color-nude-light) 100%);
+    padding-top: 84px;
+    padding-bottom: 84px;
+}
+
+.video-intro {
+    max-width: 760px;
+    margin: 0 auto 36px;
+}
+
+.video-title {
+    font-family: var(--font-serif);
+    font-size: 3.1rem;
+    color: var(--color-chocolate);
+    margin-bottom: 12px;
+}
+
+.video-subtitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--color-chocolate-light);
+}
+
+.video-frame {
+    width: min(100%, 430px);
+    margin: 0 auto;
+    border: 1px solid rgba(174, 123, 53, 0.22);
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: var(--color-chocolate);
+    box-shadow: var(--shadow-lg);
+}
+
+.demo-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    background-color: var(--color-chocolate);
+}
+
+/* ==========================================================================
+   VIRAL SECTION
+   ========================================================================== */
+.viral-section {
+    background:
+        radial-gradient(circle at 84% 10%, rgba(197, 160, 89, 0.18), transparent 28%),
+        linear-gradient(180deg, var(--color-nude-light) 0%, var(--color-white) 100%);
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
+.viral-card {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 34px;
+    align-items: center;
+    padding: 38px;
+    border-radius: 28px;
+    background-color: var(--color-white);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    box-shadow: var(--shadow-lg);
+}
+
+.viral-card .section-title {
+    margin-bottom: 14px;
+}
+
+.viral-list {
+    display: grid;
+    gap: 14px;
+}
+
+.viral-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background-color: var(--color-cream);
+    border: 1px solid rgba(44, 27, 24, 0.06);
+    color: var(--color-chocolate);
+    font-size: 1.06rem;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.viral-item span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    flex: 0 0 28px;
+    color: var(--color-white);
+    background-color: var(--color-gold-dark);
+    font-size: 0.9rem;
+    box-shadow: 0 8px 18px rgba(157, 124, 62, 0.26);
+}
 
 /* ==========================================================================
    DESIRE SECTION
@@ -927,20 +1047,24 @@ section {
     left: 18px;
     right: 18px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 10px;
 }
 
-.recipe-rank,
-.recipe-photo-tag {
-    font-size: 0.72rem;
+.recipe-rank {
+    max-width: 100%;
+    font-size: 0.74rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     border-radius: 999px;
-    padding: 7px 10px;
-    background-color: rgba(255, 255, 255, 0.16);
+    padding: 8px 12px;
+    color: var(--color-chocolate);
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(6px);
+    box-shadow: 0 8px 20px rgba(44, 27, 24, 0.16);
+    white-space: normal;
+    line-height: 1.15;
 }
 
 .recipe-image-frame {
@@ -1292,12 +1416,132 @@ section {
 }
 
 /* ==========================================================================
+   PRODUCTION COST SECTION
+   ========================================================================== */
+.cost-section {
+    background:
+        radial-gradient(circle at top left, rgba(232, 88, 115, 0.12), transparent 30%),
+        linear-gradient(180deg, var(--color-white) 0%, #fffaf4 100%);
+    padding-top: 108px;
+    padding-bottom: 108px;
+}
+
+.cost-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cost-card {
+    position: relative;
+    overflow: hidden;
+    padding: 34px;
+    border-radius: 28px;
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 2px solid rgba(197, 160, 89, 0.26);
+    box-shadow: 0 24px 48px rgba(44, 27, 24, 0.12);
+}
+
+.cost-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(197, 160, 89, 0.12), transparent 48%);
+    pointer-events: none;
+}
+
+.cost-card-featured {
+    border-color: rgba(232, 88, 115, 0.28);
+}
+
+.cost-card-featured::before {
+    background: linear-gradient(135deg, rgba(232, 88, 115, 0.14), transparent 50%);
+}
+
+.cost-card-header,
+.cost-lines {
+    position: relative;
+}
+
+.cost-label {
+    display: inline-flex;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background-color: rgba(197, 160, 89, 0.14);
+    color: var(--color-gold-dark);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.cost-card h3 {
+    font-family: var(--font-serif);
+    font-size: 2.16rem;
+    color: var(--color-chocolate);
+    margin-bottom: 24px;
+}
+
+.cost-lines {
+    display: grid;
+    gap: 12px;
+}
+
+.cost-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background-color: var(--color-cream);
+    border: 1px solid rgba(44, 27, 24, 0.06);
+}
+
+.cost-line span {
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-chocolate-light);
+}
+
+.cost-line strong {
+    font-family: var(--font-serif);
+    font-size: 1.7rem;
+    color: var(--color-chocolate);
+    white-space: nowrap;
+}
+
+.cost-profit {
+    color: var(--color-white);
+    background: linear-gradient(135deg, #3b241f 0%, #8b5a34 55%, #c5a059 100%);
+    box-shadow: 0 18px 34px rgba(157, 124, 62, 0.32);
+    transform: scale(1.03);
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+.cost-profit span,
+.cost-profit strong {
+    color: var(--color-white);
+}
+
+.cost-profit strong {
+    font-size: 2.05rem;
+}
+
+/* ==========================================================================
    EARNINGS SECTION
    ========================================================================== */
 .earnings-section {
     background:
         radial-gradient(circle at top right, rgba(197, 160, 89, 0.2), transparent 32%),
         linear-gradient(180deg, #fffaf4 0%, #f6ece2 100%);
+    padding-top: 108px;
+    padding-bottom: 108px;
 }
 
 .earnings-board {
@@ -1396,7 +1640,8 @@ section {
 .earnings-result {
     color: var(--color-white);
     background: linear-gradient(135deg, #3b241f 0%, #8b5a34 55%, #c5a059 100%);
-    box-shadow: var(--shadow-gold);
+    box-shadow: 0 22px 42px rgba(157, 124, 62, 0.35);
+    transform: scale(1.04);
 }
 
 .earnings-result strong {
@@ -2251,10 +2496,20 @@ section {
         display: flex;
         justify-content: center;
     }
+
+    .hero-proof-strip {
+        justify-content: center;
+    }
     
     .hero-badges-grid {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .viral-card {
+        grid-template-columns: 1fr;
+        padding: 30px 24px;
+        text-align: center;
     }
     
     .desire-grid {
@@ -2278,9 +2533,14 @@ section {
         order: -1;
     }
 
+    .cost-grid,
     .earnings-board,
     .earnings-math {
         grid-template-columns: 1fr;
+    }
+
+    .cost-card {
+        padding: 26px 22px;
     }
 
     .earnings-scenario {
@@ -2373,6 +2633,13 @@ section {
     .hero-subtitle {
         font-size: 1.1rem;
     }
+
+    .hero-proof-strip {
+        width: 100%;
+        border-radius: 18px;
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
     
     .btn-text {
         font-size: 1.15rem;
@@ -2385,6 +2652,34 @@ section {
 
     .earnings-board {
         gap: 20px;
+    }
+
+    .cost-card h3 {
+        font-size: 1.65rem;
+    }
+
+    .cost-line {
+        padding: 14px 15px;
+    }
+
+    .cost-line strong {
+        font-size: 1.45rem;
+    }
+
+    .cost-profit strong {
+        font-size: 1.7rem;
+    }
+
+    .viral-card {
+        padding: 24px 18px;
+        border-radius: 22px;
+    }
+
+    .viral-item {
+        align-items: flex-start;
+        padding: 14px;
+        font-size: 0.98rem;
+        text-align: left;
     }
 
     .earnings-label {
@@ -2402,6 +2697,18 @@ section {
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .video-title {
+        font-size: 2.1rem;
+    }
+
+    .video-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .video-frame {
+        border-radius: 14px;
     }
 
     .learn-grid {
