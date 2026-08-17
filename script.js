@@ -25,8 +25,10 @@ function scheduleNonCriticalWork(task) {
 function initCountdownTimer() {
     const minutesDisplay = document.getElementById('minutes');
     const secondsDisplay = document.getElementById('seconds');
-    
-    if (!minutesDisplay || !secondsDisplay) return;
+    const minutesStickyDisplay = document.getElementById('minutes-sticky');
+    const secondsStickyDisplay = document.getElementById('seconds-sticky');
+
+    if ((!minutesDisplay || !secondsDisplay) && (!minutesStickyDisplay || !secondsStickyDisplay)) return;
 
     const TIMER_DURATION_MS = 15 * 60 * 1000; // 15 Minutes
     let targetTime = localStorage.getItem('velas_gourmet_target_time');
@@ -57,8 +59,13 @@ function initCountdownTimer() {
         const seconds = totalSeconds % 60;
 
         // Display with leading zero
-        minutesDisplay.textContent = minutes < 10 ? '0' + minutes : minutes;
-        secondsDisplay.textContent = seconds < 10 ? '0' + seconds : seconds;
+        const minutesText = minutes < 10 ? '0' + minutes : minutes;
+        const secondsText = seconds < 10 ? '0' + seconds : seconds;
+
+        if (minutesDisplay) minutesDisplay.textContent = minutesText;
+        if (secondsDisplay) secondsDisplay.textContent = secondsText;
+        if (minutesStickyDisplay) minutesStickyDisplay.textContent = minutesText;
+        if (secondsStickyDisplay) secondsStickyDisplay.textContent = secondsText;
     }
 
     // Run once immediately and then every second

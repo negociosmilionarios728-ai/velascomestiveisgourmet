@@ -45,6 +45,13 @@
 </head>
 <body>
 
+    <!-- Sticky Urgency Bar -->
+    <div class="sticky-urgency-bar">
+        <span>🔥 Oferta de lançamento termina em</span>
+        <span class="sticky-timer"><span id="minutes-sticky">15</span>:<span id="seconds-sticky">00</span></span>
+        <a href="#oferta" class="sticky-urgency-link">Garantir agora →</a>
+    </div>
+
     <!-- Header Navigation -->
     <header class="main-header">
         <div class="container header-container">
@@ -58,6 +65,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section" id="hero">
+            <div class="hero-bg-image" style="background-image: url('assets/hero-bg-mesa.jpg');"></div>
             <div class="container hero-container">
                 <div class="hero-content">
                     <div class="hero-badge">
@@ -125,14 +133,41 @@
             </div>
         </section>
 
-        <!-- Video Section -->
-        <section class="video-section reveal" id="video-demo">
+        <!-- Pain / Agitation Section -->
+        <section class="pain-section reveal" id="identificacao">
             <div class="container">
-                <div class="video-intro text-center">
-                    <h2 class="video-title">Assista antes de continuar:</h2>
-                    <p class="video-subtitle">Descubra por que essas velas estão viralizando e gerando renda extra.</p>
+                <div class="pain-header text-center">
+                    <span class="section-tag">Se identificou com isso?</span>
+                    <h2 class="section-title">Você gosta de criar, <span class="highlight-serif">mas sente que...</span></h2>
                 </div>
 
+                <div class="pain-grid">
+                    <div class="pain-card">
+                        <span class="pain-icon">😕</span>
+                        <p>Seus doces ficam bonitos, mas parecem "mais um" no meio de tantos outros.</p>
+                    </div>
+                    <div class="pain-card">
+                        <span class="pain-icon">💭</span>
+                        <p>Você quer vender algo diferente, que ninguém mais está fazendo na sua cidade.</p>
+                    </div>
+                    <div class="pain-card">
+                        <span class="pain-icon">😬</span>
+                        <p>Tem medo de investir tempo numa receita nova e não sair como imaginou.</p>
+                    </div>
+                    <div class="pain-card">
+                        <span class="pain-icon">🤷</span>
+                        <p>Não sabe por onde começar a precificar, embalar e divulgar um produto novo.</p>
+                    </div>
+                </div>
+
+                <p class="pain-resolution text-center">Este método foi criado exatamente para resolver isso, passo a passo, do zero.</p>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section video-section-compact reveal" id="video-demo">
+            <div class="container">
+                <p class="video-caption text-center">▶ Assista antes de continuar — veja por que essas velas estão viralizando:</p>
                 <div class="video-frame">
                     <video class="demo-video" controls playsinline preload="metadata">
                         <source src="assets/velas-comestiveis-demo.mp4" type="video/mp4">
@@ -142,235 +177,65 @@
             </div>
         </section>
 
-        <!-- Viral Section -->
-        <section class="viral-section reveal" id="viraliza">
-            <div class="container">
-                <div class="viral-card">
-                    <div class="viral-copy">
-                        <span class="section-tag">Por que isso viraliza?</span>
-                        <h2 class="section-title">Por que as velas comest&iacute;veis <span class="highlight-serif">vendem tanto?</span></h2>
-                        <p class="section-subtitle">Elas unem curiosidade, beleza e sensa&ccedil;&atilde;o de produto premium em um formato perfeito para postar, compartilhar e vender.</p>
-                    </div>
-
-                    <div class="viral-list" aria-label="Motivos para as velas comestiveis viralizarem">
-                        <div class="viral-item"><span>&#10003;</span> Parecem sobremesas premium</div>
-                        <div class="viral-item"><span>&#10003;</span> Chamam aten&ccedil;&atilde;o no Instagram</div>
-                        <div class="viral-item"><span>&#10003;</span> As pessoas filmam e compartilham</div>
-                        <div class="viral-item"><span>&#10003;</span> Possuem alto valor percebido</div>
-                        <div class="viral-item"><span>&#10003;</span> Custam pouco para produzir</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Desire Section -->
-        <section class="desire-section reveal" id="desejo">
+        <!-- What You Will Learn Section (condensed) -->
+        <section class="learn-section reveal" id="aprender">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag">Desperte Seus Sentidos</span>
+                    <span class="section-tag">O Que Você Vai Aprender</span>
                     <h2 class="section-title">Muito Mais Que Uma Sobremesa: Uma <span class="highlight-serif">Experiência Luxuosa</span></h2>
+                    <p class="section-subtitle">Elas acendem como velas reais e revelam uma cremosidade divina de chocolate belga, caldas artesanais e chantilly premium — um formato perfeito para postar, compartilhar e vender.</p>
                     <div class="title-divider"></div>
                 </div>
 
-                <div class="desire-grid">
-                    <div class="desire-image-area">
-                        <div class="desire-main-img-wrapper">
-                            <img src="assets/vela_gourmet.png" alt="Vela Comestível Artesanal de Chocolate Gourmet acesa com calda" class="desire-img">
-                            <div class="desire-badge-overlay">
-                                <span>100% Comestível</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="desire-content-area">
-                        <h3 class="desire-subheading">Imagine surpreender amigos, clientes ou até transformar essa tendência gourmet em uma nova fonte de renda altamente lucrativa.</h3>
-                        <p class="desire-text">
-                            O mercado de doces gourmet está sempre buscando novidades, mas poucas coisas têm o poder de viralizar e chocar tanto quanto as <strong>Velas Comestíveis Artesanais</strong>. 
-                        </p>
-                        <p class="desire-text">
-                            Elas acendem como velas reais, criam uma atmosfera calorosa e intimista e, no momento seguinte, revelam uma cremosidade divina feita de chocolate belga, caldas artesanais e chantilly premium. Cada mordida é uma explosão de texturas de tirar o fôlego.
-                        </p>
-                        
-                        <div class="desire-features">
-                            <div class="desire-feature-item">
-                                <div class="feature-bullet"></div>
-                                <span>Texturas cremosas e aveludadas que derretem na boca</span>
-                            </div>
-                            <div class="desire-feature-item">
-                                <div class="feature-bullet"></div>
-                                <span>Pavios 100% comestíveis e seguros de acender</span>
-                            </div>
-                            <div class="desire-feature-item">
-                                <div class="feature-bullet"></div>
-                                <span>Estética luxuosa de alta confeitaria que valoriza qualquer mesa</span>
-                            </div>
-                        </div>
-
-                        <a href="#oferta" class="btn btn-large" id="desire-cta-btn">QUERO SURPREENDER MEUS CLIENTES</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="benefits-section reveal" id="beneficios">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">Por Que Este Método É Perfeito Para Você?</span>
-                    <h2 class="section-title">Os Inúmeros Benefícios de Iniciar <span class="highlight-serif">Hoje Mesmo</span></h2>
-                    <div class="title-divider"></div>
-                </div>
-
-                <div class="benefits-grid">
-                    <!-- Card 1 -->
+                <div class="learn-highlights-grid">
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                         </div>
                         <h3 class="benefit-card-title">Receitas Descomplicadas</h3>
-                        <p class="benefit-card-text">Nossas receitas foram estruturadas passo a passo de forma simples, com tempos exatos e quantidades precisas para que você nunca erre o ponto da sua vela.</p>
+                        <p class="benefit-card-text">Passo a passo simples, com tempos exatos e quantidades precisas para você nunca errar o ponto da vela.</p>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9.09 9 1-2h4l1 2M12 12V22M9 17h6"/></svg>
-                        </div>
-                        <h3 class="benefit-card-title">Ingredientes Acessíveis</h3>
-                        <p class="benefit-card-text">Sem ingredientes raros ou caros de importação. Você encontrará tudo o que precisa no mercado de confeitaria mais próximo da sua casa.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5V4.5z"/></svg>
-                        </div>
-                        <h3 class="benefit-card-title">Método Guia Prático</h3>
-                        <p class="benefit-card-text">Aprenda de forma fluida com um e-book lindamente ilustrado e esquematizado. Um manual prático para você ler e aplicar imediatamente.</p>
-                    </div>
-                    <!-- Card 4 -->
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
                         <h3 class="benefit-card-title">Ideal para Iniciantes</h3>
-                        <p class="benefit-card-text">Você nunca fez um doce ou trabalhou com chocolate? Sem problemas! Nós te pegamos pela mão desde o derretimento básico até a montagem final luxuosa.</p>
+                        <p class="benefit-card-text">Nunca fez um doce? Sem problema. Te pegamos pela mão do derretimento básico até a montagem final.</p>
                     </div>
-                    <!-- Card 5 -->
-                    <div class="benefit-cardhighlight">
-                        <div class="benefit-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        </div>
-                        <h3 class="benefit-card-title text-gold">Excelente Renda Extra</h3>
-                        <p class="benefit-card-text">Por ser um produto inédito e visualmente fascinante, as velas comestíveis possuem margens de lucro de até 300%. Fature alto vendendo novidades!</p>
-                    </div>
-                    <!-- Card 6 -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3z"/></svg>
-                        </div>
-                        <h3 class="benefit-card-title">Técnicas Profissionais</h3>
-                        <p class="benefit-card-text">Aprenda a fazer a temperagem correta, acabamentos impecáveis de vidro e como fazer a queima do pavio de forma limpa e deliciosa.</p>
-                    </div>
-                    <!-- Card 7 -->
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
                         </div>
                         <h3 class="benefit-card-title">Sabores Gourmet Inéditos</h3>
-                        <p class="benefit-card-text">Além do chocolate tradicional, ensinamos receitas de doce de leite com especiarias, frutas vermelhas aveludadas, pistache trufado e muito mais.</p>
+                        <p class="benefit-card-text">Chocolate belga, doce de leite com especiarias, frutas vermelhas, pistache trufado e muito mais.</p>
                     </div>
-                    <!-- Card 8 -->
-                    <div class="benefit-card">
+                    <div class="benefit-cardhighlight">
                         <div class="benefit-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                         </div>
-                        <h3 class="benefit-card-title">Produção 100% Caseira</h3>
-                        <p class="benefit-card-text">Faça tudo no conforto da sua cozinha, utilizando utensílios simples que você já tem em casa. Sem necessidade de equipamentos industriais.</p>
+                        <h3 class="benefit-card-title text-gold">Excelente Renda Extra</h3>
+                        <p class="benefit-card-text">Produto inédito com margens de lucro de até 300%. Fature alto vendendo uma novidade.</p>
                     </div>
                 </div>
+
+                <div class="learn-image-strip">
+                    <img src="assets/vela_preparo.png" alt="Pessoa confeitando vela comestível artesanal gourmet" class="learn-img">
+                    <div class="learn-overlay-card">
+                        <h3>Seu Caminho para a Confeitaria Inovadora</h3>
+                        <p>Técnicas profissionais simplificadas para resultados perfeitos desde a primeira tentativa.</p>
+                    </div>
+                </div>
+
+                <a href="#oferta" class="btn btn-large learn-cta" id="learn-cta-btn">QUERO APRENDER AGORA</a>
             </div>
         </section>
 
-        <!-- What You Will Learn Section -->
-        <section class="learn-section reveal" id="aprender">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">Grade Completa de Conteúdo</span>
-                    <h2 class="section-title">O Que Você Vai Dominar com <span class="highlight-serif">Nosso Ebook</span></h2>
-                    <div class="title-divider"></div>
-                </div>
-
-                <div class="learn-grid">
-                    <div class="learn-list">
-                        <div class="learn-item">
-                            <div class="learn-number">01</div>
-                            <div class="learn-desc">
-                                <h4>A Receita Base Perfeita</h4>
-                                <p>Aprenda a textura correta do chocolate gourmet para que a vela fique firme, mas derreta de forma incrivelmente cremosa na hora da queima.</p>
-                            </div>
-                        </div>
-                        <div class="learn-item">
-                            <div class="learn-number">02</div>
-                            <div class="learn-desc">
-                                <h4>Como Criar Pavios Comestíveis</h4>
-                                <p>O grande segredo revelado: como fabricar pavios seguros de acender, 100% comestíveis e que não alteram o sabor maravilhoso do seu doce.</p>
-                            </div>
-                        </div>
-                        <div class="learn-item">
-                            <div class="learn-number">03</div>
-                            <div class="learn-desc">
-                                <h4>Sabores Gourmet Mais Vendidos</h4>
-                                <p>Acesso exclusivo às receitas de chocolate trufado, caramelo salgado premium, ninho com nutella cremosa e pistache luxuoso.</p>
-                            </div>
-                        </div>
-                        <div class="learn-item">
-                            <div class="learn-number">04</div>
-                            <div class="learn-desc">
-                                <h4>Técnicas de Decoração Sofisticada</h4>
-                                <p>Como aplicar raspas de chocolate, pó de ouro comestível, frutas frescas, marshmallows tostados e técnicas de bicos de confeitar premium.</p>
-                            </div>
-                        </div>
-                        <div class="learn-item">
-                            <div class="learn-number">05</div>
-                            <div class="learn-desc">
-                                <h4>Estratégias de Venda e Divulgação</h4>
-                                <p>O segredo para atrair clientes dispostos a pagar muito caro pelas suas criações através de postagens virais do Instagram e TikTok.</p>
-                            </div>
-                        </div>
-                        <div class="learn-item">
-                            <div class="learn-number">06</div>
-                            <div class="learn-desc">
-                                <h4>Precificação Inteligente e Lucrativa</h4>
-                                <p>Uma fórmula matemática simples para calcular seus custos exatos e definir preços justos que valorizam seu tempo e colocam dinheiro no bolso.</p>
-                            </div>
-                        </div>
-                        <div class="learn-item">
-                            <div class="learn-number">07</div>
-                            <div class="learn-desc">
-                                <h4>Embalagens de Luxo Que Valorizam</h4>
-                                <p>Sugestões práticas de caixas, taças, fitas e tags que transformam sua vela gourmet em um presente inesquecível e luxuoso.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="learn-image-area">
-                        <div class="learn-img-wrapper">
-                            <img src="assets/vela_preparo.png" alt="Pessoa confeitando vela comestível artesanal gourmet em ambiente profissional" class="learn-img">
-                            <div class="learn-overlay-card">
-                                <h3>Seu Caminho para a Confeitaria Inovadora</h3>
-                                <p>Com técnicas profissionais simplificadas para resultados perfeitos desde a primeira tentativa.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Production Cost Section -->
+        <!-- Cost & Earnings Potential (condensed) -->
         <section class="cost-section reveal" id="custos">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag">Quanto custa produzir uma vela?</span>
-                    <h2 class="section-title">Exemplos reais para entender o <span class="highlight-serif">lucro por unidade</span></h2>
-                    <p class="section-subtitle">Com ingredientes acess&iacute;veis, uma vela que parece sobremesa de luxo pode ter um custo baixo e uma margem muito atrativa.</p>
+                    <span class="section-tag">Quanto dá para ganhar?</span>
+                    <h2 class="section-title">Exemplos reais de <span class="highlight-serif">custo, venda e lucro</span></h2>
                     <div class="title-divider"></div>
                 </div>
 
@@ -380,7 +245,6 @@
                             <span class="cost-label">Exemplo real</span>
                             <h3>Morango Gourmet</h3>
                         </div>
-
                         <div class="cost-lines">
                             <div class="cost-line">
                                 <span>Custo</span>
@@ -399,22 +263,21 @@
 
                     <article class="cost-card cost-card-featured">
                         <div class="cost-card-header">
-                            <span class="cost-label">Exemplo real</span>
-                            <h3>Red Velvet</h3>
+                            <span class="cost-label">Potencial mensal</span>
+                            <h3>5 velas/dia</h3>
                         </div>
-
                         <div class="cost-lines">
                             <div class="cost-line">
-                                <span>Custo</span>
-                                <strong>R$6,50</strong>
+                                <span>Ticket médio</span>
+                                <strong>R$25</strong>
                             </div>
                             <div class="cost-line">
-                                <span>Venda</span>
-                                <strong>R$30</strong>
+                                <span>Em 30 dias</span>
+                                <strong>150 velas</strong>
                             </div>
                             <div class="cost-line cost-profit">
-                                <span>Lucro</span>
-                                <strong>R$23,50</strong>
+                                <span>Faturamento/mês</span>
+                                <strong>R$3.750</strong>
                             </div>
                         </div>
                     </article>
@@ -422,103 +285,14 @@
             </div>
         </section>
 
-        <!-- Earnings Section -->
-        <section class="earnings-section reveal" id="ganhos">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">Quanto d&aacute; para ganhar?</span>
-                    <h2 class="section-title">Uma conta simples para enxergar o <span class="highlight-serif">potencial mensal</span></h2>
-                    <p class="section-subtitle">Com poucas unidades por dia, suas velas j&aacute; podem virar uma renda recorrente e muito atrativa.</p>
-                    <div class="title-divider"></div>
-                </div>
-
-                <div class="earnings-board">
-                    <div class="earnings-scenario">
-                        <span class="earnings-label">Exemplo realista</span>
-                        <h3>Vendendo apenas:</h3>
-                        <div class="earnings-math">
-                            <div class="earnings-math-item">
-                                <strong>5<br>velas/dia</strong>
-                                <span>produ&ccedil;&atilde;o enxuta</span>
-                            </div>
-                            <span class="earnings-operator">x</span>
-                            <div class="earnings-math-item">
-                                <strong>R$25 cada</strong>
-                                <span>ticket acess&iacute;vel</span>
-                            </div>
-                            <span class="earnings-operator">=</span>
-                            <div class="earnings-result">
-                                <small>faturamento estimado</small>
-                                <strong>R$3.750<span>/m&ecirc;s</span></strong>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="earnings-points">
-                        <div class="earnings-point">
-                            <strong>150 velas no m&ecirc;s</strong>
-                            <span>5 unidades por dia durante 30 dias.</span>
-                        </div>
-                        <div class="earnings-point">
-                            <strong>Produto com alto valor percebido</strong>
-                            <span>Visual premium permite cobrar mais do que um doce comum.</span>
-                        </div>
-                        <div class="earnings-point">
-                            <strong>Escal&aacute;vel para datas especiais</strong>
-                            <span>Anivers&aacute;rios, presentes e encomendas elevam o ticket rapidamente.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Visual Recipes Section -->
+        <!-- Visual Recipes Section (condensed) -->
         <section class="recipes-showcase-section reveal" id="receitas">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag">O Visual Que Faz Vender No Instagram</span>
+                    <span class="section-tag">Coleção Completa</span>
                     <h2 class="section-title">As Receitas <span class="highlight-serif">Mais Desejadas</span></h2>
-                    <p class="section-subtitle">Sabores com alto apelo visual, potencial de lucro e aquele efeito imediato de "eu quero" na vitrine, no feed e nas encomendas.</p>
+                    <p class="section-subtitle">25 receitas gourmet com alto apelo visual e aquele efeito imediato de "eu quero" na vitrine, no feed e nas encomendas.</p>
                     <div class="title-divider"></div>
-                </div>
-
-                <div class="recipes-proof-layout">
-                    <div class="recipes-photo-collage">
-                        <div class="collage-card collage-card-main">
-                            <img src="assets/depois.png" alt="Vela comest&iacute;vel gourmet com acabamento luxuoso e visual instagram&aacute;vel">
-                            <span class="collage-label">Visual que faz parar o scroll</span>
-                        </div>
-                        <div class="collage-card">
-                            <img src="assets/vela_gourmet.png" alt="Vela comest&iacute;vel cremosa com decora&ccedil;&atilde;o gourmet">
-                            <span class="collage-label">Textura cremosa</span>
-                        </div>
-                        <div class="collage-card">
-                            <img src="assets/vela_preparo.png" alt="Produ&ccedil;&atilde;o artesanal de vela comest&iacute;vel gourmet">
-                            <span class="collage-label">Acabamento profissional</span>
-                        </div>
-                    </div>
-
-                    <div class="recipes-proof-copy">
-                        <div class="proof-copy-card">
-                            <span class="proof-kicker">Aqui O Cliente Deseja Antes De Ler</span>
-                            <h3>Muitas velas, muitos sabores e uma apar&ecirc;ncia que desperta desejo instant&acirc;neo.</h3>
-                            <p>Esse nicho vende muito pelo impacto visual. Por isso, o ebook entrega uma sele&ccedil;&atilde;o ampla de receitas e montagens para voc&ecirc; criar conte&uacute;do bonito, produtos premium e uma vitrine que parece viciante de olhar.</p>
-                            <div class="proof-metrics">
-                                <div class="proof-metric">
-                                    <strong>25</strong>
-                                    <span>receitas gourmet</span>
-                                </div>
-                                <div class="proof-metric">
-                                    <strong>7</strong>
-                                    <span>sabores campe&otilde;es</span>
-                                </div>
-                                <div class="proof-metric">
-                                    <strong>100%</strong>
-                                    <span>apelo visual</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="recipes-grid" aria-label="Sabores gourmet ensinados no ebook">
@@ -695,68 +469,13 @@
             </div>
         </section>
 
-        <!-- Basic Offer Section -->
-        <section class="basic-offer-section reveal" id="oferta-basica">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">Opção Essencial</span>
-                    <h2 class="section-title">Comece com o <span class="highlight-serif">Ebook de Receitas</span></h2>
-                    <p class="section-subtitle">Acesso exclusivo ao manual digital com 25 receitas ilustradas de Velas Comestíveis Artesanais (Sem bônus inclusos).</p>
-                    <div class="title-divider"></div>
-                </div>
-
-                <div class="basic-offer-box">
-                    <div class="basic-offer-content">
-                        <h3 class="basic-offer-title">O que está incluso nesta opção:</h3>
-                        <ul class="offer-list">
-                            <li>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-gold"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Ebook Principal: Velas Comestíveis Artesanais</span>
-                            </li>
-                            <li>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-gold"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>25 Receitas Exclusivas de Alta Confeitaria</span>
-                            </li>
-                            <li>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-gold"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Passo a Passo Simplificado (Do Zero)</span>
-                            </li>
-                        </ul>
-                        <div class="basic-offer-note text-center">
-                            <span class="warning-badge">❌ Não inclui Lista de Fornecedores, Guia de Vendas ou Rótulos</span>
-                        </div>
-                    </div>
-                    <div class="basic-offer-price-area">
-                        <div class="pricing-card basic-card">
-                            <span class="pricing-original">De R$ 97,00</span>
-                            <div class="pricing-current-box">
-                                <span class="currency">Por Apenas</span>
-                                <div class="price-row">
-                                    <span class="currency-symbol">R$</span>
-                                    <span class="price-main">29</span>
-                                    <span class="price-cents">,90</span>
-                                </div>
-                                <span class="payment-installments">6x de R$ 5,49</span>
-                                <span class="payment-note">Pagamento único. Sem bônus.</span>
-                            </div>
-                            <a href="https://zuckpay.com.br/checkout/receitas-de-velas-comestiveis-gourmet" target="_blank" class="btn btn-giant btn-pulse btn-gold-gradient" id="basic-order-cta-btn">
-                                <span class="btn-text">QUERO APRENDER O BÁSICO</span>
-                                <span class="btn-subtext">Comprar apenas o Ebook por R$ 29,90</span>
-                            </a>
-                            <img src="assets/garantia-7-dias.png" alt="Teste sem risco por 7 dias: compra segura, sem riscos e entrega imediata" class="guarantee-image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Premium Bonuses Section -->
         <section class="bonus-section reveal" id="bonus">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag" style="background-color: var(--color-red-light); color: var(--color-red-alert); padding: 4px 12px; border-radius: 12px; font-weight: 700;">✨ EXCLUSIVO DO COMBO PREMIUM</span>
-                    <h2 class="section-title" style="margin-top: 12px;">Escolhendo o Combo Completo, Você Recebe <span class="highlight-serif">Estes Bônus de Graça</span></h2>
-                    <p class="section-subtitle">Adicione R$ 267,10 em materiais de apoio, vendas e apresenta&ccedil;&atilde;o premium ao seu pedido 100% gr&aacute;tis escolhendo o Combo Premium (R$ 47,00).</p>
+                    <span class="section-tag" style="background-color: var(--color-red-light); color: var(--color-red-alert); padding: 4px 12px; border-radius: 12px; font-weight: 700;">✨ SÓ POR HOJE, TOTALMENTE GRÁTIS</span>
+                    <h2 class="section-title" style="margin-top: 12px;">Ao Entrar Hoje, Você Recebe <span class="highlight-serif">Estes Bônus de Graça</span></h2>
+                    <p class="section-subtitle">Adicione R$ 267,10 em materiais de apoio, vendas e apresenta&ccedil;&atilde;o premium ao seu pedido 100% gr&aacute;tis.</p>
                     <div class="title-divider"></div>
                 </div>
 
@@ -824,6 +543,26 @@
             </div>
         </section>
 
+        <!-- Kit Checklist Section -->
+        <section class="kit-section reveal" id="kit">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Tudo Que Você Recebe</span>
+                    <h2 class="section-title">Seu Kit Completo <span class="highlight-serif">Velas Comestíveis</span></h2>
+                    <div class="title-divider"></div>
+                </div>
+
+                <div class="kit-list">
+                    <div class="kit-item">📘 <span>Ebook Velas Comestíveis Artesanais (25 receitas, PDF)</span></div>
+                    <div class="kit-item">🏷️ <span>Bônus: Lista Secreta de Fornecedores</span></div>
+                    <div class="kit-item">📲 <span>Bônus: Guia de Divulgação no Instagram/TikTok</span></div>
+                    <div class="kit-item">📦 <span>Bônus: Modelos de Embalagem e Tags Editáveis</span></div>
+                    <div class="kit-item">♾️ <span>Acesso vitalício + atualizações gratuitas</span></div>
+                    <div class="kit-item">🔒 <span>Compra 100% segura, acesso imediato</span></div>
+                </div>
+            </div>
+        </section>
+
         <!-- Irresistible Offer Section -->
         <section class="offer-section" id="oferta">
             <div class="container">
@@ -850,76 +589,32 @@
                         </div>
                     </div>
 
-                    <div class="offer-grid">
-                        <div class="offer-details">
-                            <div class="offer-anchor-box">
-                                <span class="offer-anchor-label">Economia liberada hoje</span>
-                                <h3>Se fosse comprar cada parte separadamente, esse pacote sairia por <span>R$297,00</span> sem dificuldade.</h3>
-                                <p>Hoje você entra com o ebook completo, os 3 bônus premium e os materiais que aceleram suas vendas pagando muito menos do que esse valor total.</p>
+                    <div class="offer-pricing-single">
+                        <div class="pricing-card">
+                            <div class="offer-value-stack">
+                                <span class="offer-value-label">Pacote completo avaliado em</span>
+                                <strong>R$ 297,00</strong>
+                                <small>Ebook + 3 bônus + materiais premium</small>
                             </div>
-                            <h3 class="offer-includes-title">O que você leva no pacote completo:</h3>
-                            <ul class="offer-list">
-                                <li>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-gold"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <span>Ebook Completo: Velas Comestíveis Artesanais (Passo a Passo)</span>
-                                </li>
-                                <li>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-gold"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <span>Bônus 1: Lista Secreta de Fornecedores Recomendados</span>
-                                </li>
-                                <li>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-gold"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <span>Bônus 2: Guia de Divulgação Prática no Instagram/TikTok</span>
-                                </li>
-                                <li>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-gold"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <span>Bônus 3: Modelos Digitais de Embalagens, Rótulos e Tags</span>
-                                </li>
-                                <li>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-gold"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <span>Acesso Vitalício + Atualizações Gratuitas Futuras</span>
-                                </li>
-                            </ul>
-
-                            <!-- Safe Purchase Badges -->
-                            <div class="safe-badges">
-                                <div class="safe-badge-item">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                                    <span>Compra 100% Segura</span>
+                            <span class="pricing-original">De R$ 297,00</span>
+                            <div class="pricing-current-box">
+                                <span class="currency">Hoje por apenas</span>
+                                <div class="price-row">
+                                    <span class="currency-symbol">R$</span>
+                                    <span class="price-main">47</span>
+                                    <span class="price-cents">,00</span>
                                 </div>
-                                <div class="safe-badge-item">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                    <span>Acesso Imediato</span>
-                                </div>
+                                <span class="payment-installments">6x de R$ 8,63</span>
+                                <span class="payment-note">Acesso completo + Todos os Bônus Inclusos.</span>
                             </div>
-                        </div>
 
-                        <!-- Price & CTA Area -->
-                        <div class="offer-pricing">
-                            <div class="pricing-card">
-                                <div class="offer-value-stack">
-                                    <span class="offer-value-label">Pacote completo avaliado em</span>
-                                    <strong>R$ 297,00</strong>
-                                    <small>Ebook + bônus + materiais premium</small>
-                                </div>
-                                <span class="pricing-original">De R$ 297,00</span>
-                                <div class="pricing-current-box">
-                                    <span class="currency">Hoje por apenas</span>
-                                    <div class="price-row">
-                                        <span class="currency-symbol">R$</span>
-                                        <span class="price-main">47</span>
-                                        <span class="price-cents">,00</span>
-                                    </div>
-                                    <span class="payment-installments">6x de R$ 8,63</span>
-                                    <span class="payment-note">Acesso completo + Todos os Bônus Inclusos.</span>
-                                </div>
+                            <a href="https://zuckpay.com.br/checkout/velas-comestiveis-completo" target="_blank" class="btn btn-giant btn-gold-gradient" id="order-cta-btn">
+                                <span class="btn-text">QUERO MEU EBOOK AGORA</span>
+                                <span class="btn-subtext">Aproveitar desconto limitado de hoje</span>
+                            </a>
+                            <img src="assets/garantia-7-dias.png" alt="Teste sem risco por 7 dias: compra segura, sem riscos e entrega imediata" class="guarantee-image">
 
-                                <a href="https://zuckpay.com.br/checkout/velas-comestiveis-completo" target="_blank" class="btn btn-giant btn-gold-gradient" id="order-cta-btn">
-                                    <span class="btn-text">QUERO MEU EBOOK AGORA</span>
-                                    <span class="btn-subtext">Aproveitar desconto limitado de hoje</span>
-                                </a>
-                                <img src="assets/garantia-7-dias.png" alt="Teste sem risco por 7 dias: compra segura, sem riscos e entrega imediata" class="guarantee-image">
-                            </div>
+                            <a href="https://zuckpay.com.br/checkout/receitas-de-velas-comestiveis-gourmet" target="_blank" class="basic-offer-link" id="basic-order-cta-btn">Quero só o ebook, sem bônus, por R$ 29,90</a>
                         </div>
                     </div>
                 </div>
