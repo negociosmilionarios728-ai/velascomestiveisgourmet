@@ -5,9 +5,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('js-enhanced');
     initCountdownTimer();
+    initExclusiveUpsellPopup();
     scheduleNonCriticalWork(initFaqAccordion);
     scheduleNonCriticalWork(initScrollReveal);
     scheduleNonCriticalWork(initLazyBeforeAfterSlider);
+    scheduleNonCriticalWork(initHeroBackgroundVideo);
 });
 
 function scheduleNonCriticalWork(task) {
@@ -74,7 +76,76 @@ function initCountdownTimer() {
 }
 
 /**
- * 2. FAQ ACCORDION TOGGLING
+ * 2. EXCLUSIVE UPSELL POPUP (KIT SIMPLES -> KIT COMPLETO)
+ * Intercepts the R$29,90 checkout click and offers the complete kit
+ * at a one-time discounted price before letting the user proceed.
+ */
+function initExclusiveUpsellPopup() {
+    const trigger = document.getElementById('basic-order-cta-btn');
+    const modal = document.getElementById('upsell-modal');
+    if (!trigger || !modal) return;
+
+    const closeBtn = document.getElementById('upsell-modal-close');
+    const declineLink = document.getElementById('oto-decline-btn');
+    const minutesEl = document.getElementById('upsell-minutes');
+    const secondsEl = document.getElementById('upsell-seconds');
+
+    const COUNTDOWN_SECONDS = 120;
+    let remaining = COUNTDOWN_SECONDS;
+    let countdownInterval = null;
+
+    function renderCountdown() {
+        const m = Math.floor(remaining / 60);
+        const s = remaining % 60;
+        if (minutesEl) minutesEl.textContent = String(m).padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = String(s).padStart(2, '0');
+    }
+
+    function startCountdown() {
+        remaining = COUNTDOWN_SECONDS;
+        renderCountdown();
+        clearInterval(countdownInterval);
+        countdownInterval = setInterval(() => {
+            remaining--;
+            if (remaining < 0) {
+                clearInterval(countdownInterval);
+                return;
+            }
+            renderCountdown();
+        }, 1000);
+    }
+
+    function openModal() {
+        modal.classList.add('active');
+        document.body.classList.add('modal-open');
+        startCountdown();
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+        clearInterval(countdownInterval);
+    }
+
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (declineLink) declineLink.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+}
+
+/**
+ * 3. FAQ ACCORDION TOGGLING
  */
 function initFaqAccordion() {
     const faqItems = document.querySelectorAll('.faq-item');
@@ -114,7 +185,44 @@ function initFaqAccordion() {
 }
 
 /**
- * 3. BEFORE & AFTER INTERACTIVE SLIDER (DRAG AND TOUCH SUPPORT)
+ * 4. HERO BACKGROUND VIDEO
+ * Only ever attaches a <source> (and downloads video bytes) on wide screens
+ * for users who don't prefer reduced motion. Mobile/reduced-motion users
+ * just see the lightweight poster image — no video request is made at all.
+ */
+function initHeroBackgroundVideo() {
+    const video = document.getElementById('hero-bg-video');
+    if (!video) return;
+
+    const canPlayVideo = window.matchMedia(
+        '(min-width: 769px) and (prefers-reduced-motion: no-preference)'
+    ).matches;
+    if (!canPlayVideo) return;
+
+    const source = document.createElement('source');
+    source.src = 'assets/hero-bg-video.mp4';
+    source.type = 'video/mp4';
+    video.appendChild(source);
+    video.load();
+    video.play().catch(() => {});
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play().catch(() => {});
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0 });
+
+        observer.observe(video);
+    }
+}
+
+/**
+ * 5. BEFORE & AFTER INTERACTIVE SLIDER (DRAG AND TOUCH SUPPORT)
  */
 function initLazyBeforeAfterSlider() {
     const slider = document.getElementById('before-after-slider');
@@ -224,7 +332,7 @@ function initBeforeAfterSlider() {
 }
 
 /**
- * 4. SCROLL REVEAL ANIMATIONS
+ * 6. SCROLL REVEAL ANIMATIONS
  */
 function initScrollReveal() {
     const revealElements = document.querySelectorAll('.reveal');

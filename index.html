@@ -65,7 +65,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section" id="hero">
-            <div class="hero-bg-image" style="background-image: url('assets/hero-bg-mesa.jpg');"></div>
+            <video class="hero-bg-video" id="hero-bg-video" muted loop playsinline preload="none" poster="assets/hero-bg-poster.jpg"></video>
             <div class="container hero-container">
                 <div class="hero-content">
                     <div class="hero-badge">
@@ -589,8 +589,34 @@
                         </div>
                     </div>
 
-                    <div class="offer-pricing-single">
-                        <div class="pricing-card">
+                    <div class="offer-pricing-columns">
+                        <!-- Kit Simples -->
+                        <div class="pricing-card basic-card">
+                            <span class="pricing-tag">Kit Simples</span>
+
+                            <div class="pricing-current-box">
+                                <span class="currency">Hoje por apenas</span>
+                                <div class="price-row">
+                                    <span class="currency-symbol">R$</span>
+                                    <span class="price-main">29</span>
+                                    <span class="price-cents">,90</span>
+                                </div>
+                                <span class="payment-note">Pagamento único, acesso imediato.</span>
+                            </div>
+
+                            <ul class="pricing-features">
+                                <li>📘 <span>Ebook Velas Comestíveis Artesanais (25 receitas, PDF)</span></li>
+                            </ul>
+
+                            <button type="button" class="btn btn-large btn-outline-gold" id="basic-order-cta-btn">
+                                <span class="btn-text">Quero só o ebook, sem bônus, por R$ 29,90</span>
+                            </button>
+                        </div>
+
+                        <!-- Kit Completo -->
+                        <div class="pricing-card pricing-card-featured">
+                            <span class="pricing-tag pricing-tag-featured">Kit Completo</span>
+
                             <div class="offer-value-stack">
                                 <span class="offer-value-label">Pacote completo avaliado em</span>
                                 <strong>R$ 297,00</strong>
@@ -608,13 +634,20 @@
                                 <span class="payment-note">Acesso completo + Todos os Bônus Inclusos.</span>
                             </div>
 
+                            <ul class="pricing-features">
+                                <li>📘 <span>Ebook Velas Comestíveis Artesanais (25 receitas, PDF)</span></li>
+                                <li>🏷️ <span>Bônus: Lista Secreta de Fornecedores</span></li>
+                                <li>📲 <span>Bônus: Guia de Divulgação no Instagram/TikTok</span></li>
+                                <li>📦 <span>Bônus: Modelos de Embalagem e Tags Editáveis</span></li>
+                                <li>♾️ <span>Acesso vitalício + atualizações gratuitas</span></li>
+                                <li>🔒 <span>Compra 100% segura, acesso imediato</span></li>
+                            </ul>
+
                             <a href="https://zuckpay.com.br/checkout/velas-comestiveis-completo" target="_blank" class="btn btn-giant btn-gold-gradient" id="order-cta-btn">
                                 <span class="btn-text">QUERO MEU EBOOK AGORA</span>
                                 <span class="btn-subtext">Aproveitar desconto limitado de hoje</span>
                             </a>
                             <img src="assets/garantia-7-dias.png" alt="Teste sem risco por 7 dias: compra segura, sem riscos e entrega imediata" class="guarantee-image">
-
-                            <a href="https://zuckpay.com.br/checkout/receitas-de-velas-comestiveis-gourmet" target="_blank" class="basic-offer-link" id="basic-order-cta-btn">Quero só o ebook, sem bônus, por R$ 29,90</a>
                         </div>
                     </div>
                 </div>
@@ -731,6 +764,47 @@
         </div>
     </footer>
 
+    <!-- Exclusive Upsell Popup (shown when clicking the R$29,90 basic kit) -->
+    <div class="upsell-modal-overlay" id="upsell-modal">
+        <div class="upsell-modal" role="dialog" aria-modal="true" aria-labelledby="upsell-modal-title">
+            <button type="button" class="upsell-modal-close" id="upsell-modal-close" aria-label="Fechar">✕</button>
+
+            <span class="upsell-badge">🎉 Oferta exclusiva, só agora</span>
+
+            <h3 id="upsell-modal-title">Espera! Leve o Kit Completo com um desconto que não vai se repetir</h3>
+            <p class="upsell-modal-subtitle">Antes de seguir só com o ebook, destrave todos os bônus por um preço criado especialmente para quem chegou até aqui.</p>
+
+            <div class="upsell-price-row">
+                <span class="upsell-price-old">De R$ 47</span>
+                <div class="upsell-price-new">
+                    <span class="currency-symbol">R$</span>
+                    <span class="price-main">37</span>
+                    <span class="price-cents">,00</span>
+                </div>
+            </div>
+            <p class="upsell-price-caption">Pagamento único, acesso imediato — só nesta tela.</p>
+
+            <ul class="upsell-features">
+                <li>🏷️ <span>+ Lista Secreta de Fornecedores</span></li>
+                <li>📲 <span>+ Guia de Divulgação no Instagram/TikTok</span></li>
+                <li>📦 <span>+ Modelos de Embalagem e Tags Editáveis</span></li>
+                <li>♾️ <span>+ Acesso vitalício e atualizações gratuitas</span></li>
+            </ul>
+
+            <div class="upsell-urgency">
+                <span>⏳ Essa oferta expira em</span>
+                <span class="upsell-timer"><span id="upsell-minutes">02</span>:<span id="upsell-seconds">00</span></span>
+            </div>
+
+            <a href="https://zuckpay.com.br/checkout/kit-promocional-completo-velas-gourmet" target="_blank" class="btn btn-giant btn-gold-gradient" id="oto-upgrade-btn">
+                <span class="btn-text">SIM! QUERO O KIT COMPLETO POR R$37</span>
+                <span class="btn-subtext">Desconto exclusivo, disponível só nesta tela</span>
+            </a>
+
+            <a href="https://zuckpay.com.br/checkout/receitas-de-velas-comestiveis-gourmet" target="_blank" class="upsell-decline-link" id="oto-decline-btn">Não, quero continuar só com o ebook por R$ 29,90</a>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 
 <script>
@@ -740,7 +814,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const checkoutButtons = [
         "order-cta-btn",
-        "basic-order-cta-btn"
+        "oto-upgrade-btn",
+        "oto-decline-btn"
     ];
 
     checkoutButtons.forEach(function(buttonId) {
